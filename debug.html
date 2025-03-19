@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug API</title>
+</head>
+<body>
+    <h1>Debugging API `read.php`</h1>
+    <p>Periksa Console untuk melihat data.</p>
+
+    <script>
+        fetch("http://localhost/iot_final/api/read.php")
+            .then(response => response.text())
+            .then(data => {
+                console.log("Raw response: ", data);
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+            });
+    </script>
+</body>
+</html>
